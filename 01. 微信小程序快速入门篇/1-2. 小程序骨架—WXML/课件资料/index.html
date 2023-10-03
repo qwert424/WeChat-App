@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--pages/wxml/index.wxml-->
+
+    <!-- 数据绑定 -->
+    <!-- 逻辑语法 -->
+    <!-- <text>{{time}}</text> -->
+
+    <!-- 条件逻辑 -->
+    <!-- <view wx:if="{{length>5}}">
+    <text>长度大于5</text>
+</view>
+<view wx:elif="{{length<5&&length>3}}"><text>长度小于5，大于3</text></view>
+<block wx:else="{{length<1}}"><text>长度小于1</text>
+<view>haaha</view>
+</block> -->
+
+    <!-- 列表渲染 -->
+    <!-- <view wx:for="{{mytest}}">
+<text>{{index}}:{{item.index}}</text>
+</view> -->
+
+    <!-- <view wx:for="{{mytest}}" wx:for-index="ind" wx:for-item='ite' wx:key="ind">
+<text>{{ind}}:{{ite.index}}</text>
+</view> -->
+
+    <!-- <block wx:for="{{mytest}}" wx:key="index">
+  <view>{{index}}</view>
+  <view>{{item.index}}</view>
+</block> -->
+
+    <!-- 模板 -->
+    <!-- <template name="test">
+<view wx:for="{{fruits}}" wx:key="index">
+  <text>我喜欢的水果是：{{item}}</text>
+  {{data1}}
+</view>
+</template> -->
+
+    <!-- <template is="test" data="{{fruits,data1:'你好'}}"></template> -->
+
+    <!-- <template name="odd">
+<view>odd</view>
+</template>
+<template name="even">
+<view>even</view>
+</template> -->
+
+    <!-- <view wx:for="{{arr}}" wx:key="index">
+  <template is="{{item%2===0?'even':'odd'}}"></template>
+</view> -->
+
+    <!-- <template name="WHO">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+
+<template is="WHO" data="{{...allData}}"></template> -->
+
+    <!-- 引用 -->
+    <!-- <import src="../../template/myTestTemplate/index" />
+<template is="myTestTemplate" data="{{test:'nihao'}}"></template> -->
+
+    <!-- <include src="../../template/includeTest/index"/> -->
+
+
+
+</body>
+
+</html>
