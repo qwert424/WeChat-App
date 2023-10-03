@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- APP构造器 -->
+    <!-- // app.js 入口文件
+App({
+  //当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
+  onLaunch(options) {
+
+    // // 展示本地存储能力
+    // const logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
+
+    // // 登录
+    // wx.login({
+    //   success: res => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   }
+    // })
+  },
+
+  // 当小程序启动，或从后台进入前台显示，会触发 onShow
+  onShow: function(options) {
+  },
+
+  // 当小程序从前台进入后台，会触发 onHide
+  onHide: function() {
+  },
+
+  // 当小程序发生脚本错误，或者 API 调用失败时，会触发 onError 并带上错误信息
+  onError: function(msg) {},
+
+  // 全局共享数据
+  globalData: {
+    userInfo: null,
+    a:1
+  },
+}) -->
+
+    <!-- Page构造器  -->
+
+    <!-- <view>{{myData}}</view>
+<button bind:tap="handleEdit">点击修改数据</button> -->
+
+    <!-- <button bind:tap="handleChange">点击我跳转</button> -->
+
+
+    <!-- js -->
+    <!-- // pages/wxml/index.js
+
+    // 引入全局数据
+    const app = getApp();
+
+    Page({
+    /**
+    * 页面的初始数据
+    */
+    data: {
+    myData:"请修改我",
+    globalDataTest: {...app.globalData},
+    } // handleEdit(){
+    // this.setData({
+    // myData:"hahah"
+    // },function(){
+    // console.log("做的好")
+    // })
+    // },
+    handleChange(){
+    wx.navigateTo({
+    url: '/pages/index/index?test=1&other={a:1}',
+    })
+    },
+    }) -->
+
+    <!-- 跳转页面 -->
+    <!-- onLoad(options){
+        console.log(options)
+      } -->
+
+</body>
+
+</html>

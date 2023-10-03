@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 事件 冒泡 -->
+    <!-- <view class="outter" data-id="outter" bind:tap="OutTapHandle">
+  <view class="middle" data-id="middle" catch:tap="MidTapHandle">
+    <view class="inner" data-id="inner" bind:tap="innTapHandle"></view>
+  </view>
+</view> -->
+
+    <!-- 事件捕获 先捕获在冒泡 -->
+    <!-- <view class="outter" data-id="outter" capture-bind:tap="OutTapHandle">
+  <view class="middle" data-id="middle" catch:tap="MidTapHandle">
+    <view class="inner" data-id="inner" bind:tap="innTapHandle"></view>
+  </view>
+</view> -->
+    <!-- capture-catch capture-catch将中断捕获阶段 -->
+    <!-- <view class="outter" data-id="outter" capture-catch:tap="OutTapHandle">
+  <view class="middle" data-id="middle" catch:tap="MidTapHandle">
+    <view class="inner" data-id="inner" bind:tap="innTapHandle"></view>
+  </view>
+</view> -->
+
+    <!-- 事件对象 -->
+    <!-- <view data-id="test" bind:tap="testTapHandle">click me</view> -->
+</body>
+
+</html>
