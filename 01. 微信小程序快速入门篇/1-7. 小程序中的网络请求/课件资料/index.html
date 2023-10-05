@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--pages/requestTest/requestTest.wxml-->
+    <!-- <view>
+        <text>账号：</text>
+        <input type="text" name="" id="" class="input-container" placeholder="请输入账号" model:value="{{login}}"
+            bind:input="inputHandle" />
+        <text>密码：</text>
+        <input type="password" name="" id="" class="input-container" placeholder="请输入密码" model:value="{{passWord}}"
+            bind:input="inputHandle" />
+        <button bind:tap="GetHandle">Get请求</button>
+        <button bind:tap="PostHandle">Post请求</button>
+    </view> -->
+
+
+    <!-- // pages/requestTest/requestTest.js
+
+    let isClick = false;
+    Page({
+
+    /**
+    * 页面的初始数据
+    */
+    data: {
+    //用户信息
+    login: "",
+    passWord: ""
+    },
+
+    // input事件
+    inputHandle() {
+    },
+    // Get请求
+    GetHandle() {
+    wx.request({
+    url: 'http://localhost:3000',
+    data: {
+    login: this.data.login,
+    passWord: this.data.passWord,
+    },
+    success(e) {
+    console.log(e)
+    },
+    fail() {
+    },
+    complete() {
+    }
+    })
+    },
+
+    // post请求
+    PostHandle() {
+    if (isClick) {
+    return;
+    }
+    isClick = true;
+    wx.showLoading({
+    title: '注册中...',
+    })
+    wx.request({
+    url: 'http://localhost:3000/abc',
+    method: "POST",
+    data: {
+    login: this.data.login,
+    passWord: this.data.passWord,
+    },
+    success(e) {
+    wx.showToast({
+    title: '注册成功',
+    icon: "success"
+    })
+
+    },
+    fail() {
+    wx.showToast({
+    title: '网络开小差',
+    icon: "loading",
+    })
+    },
+    complete() {
+    isClick = false;
+    wx.hideLoading();
+    }
+    })
+    },
+    })
+
+</body>
+
+</html>
