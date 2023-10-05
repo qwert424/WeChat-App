@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- login页面 -->
+    <!-- onShow() {
+        wx.getStorage({
+          "key": "login",
+          success: (e) => {
+            this.setData({
+              "login": e.data
+            })
+          }
+        })
+        wx.getStorage({
+          "key": "passWord",
+          success: (e) => {
+            this.setData({
+              "passWord": e.data
+            })
+          }
+        })
+      },
+
+    login() {
+        if (isclick) {
+          return;
+        }
+        isclick = true;
+        wx.showLoading({
+          "title": "登录中..."
+        })
+        wx.request({
+          url: 'http://localhost:3000',
+          data: {
+            login: this.data.login,
+            passWord: this.data.passWord,
+          },
+          success:(e)=> {
+            wx.hideLoading();
+            wx.showToast({
+              title: "登录成功",
+              icon: "success"
+            })
+            wx.setStorageSync('login', this.data.login);
+            wx.setStorageSync('passWord', this.data.passWord);
+          },
+          fail() {
+            wx.hideLoading();
+            wx.showToast({
+              title: '网络开小差',
+              icon: "loading",
+            })
+          },
+          complete() {
+            isclick = false;
+          }
+        })
+      }, -->
+
+    <!-- 注册页面 -->
+    <!-- success:(e)=> {
+        wx.hideLoading();
+        wx.showToast({
+          title: '注册成功',
+          icon: "success"
+        })
+        wx.setStorageSync('login', this.data.login);
+        wx.setStorageSync('passWord', this.data.passWord);
+        wx.switchTab({
+          url: '/pages/login/login',
+        })
+      }, -->
+</body>
+
+</html>
