@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- view hover-class点击样式 -->
+    <!-- <view class="ViewContainer" hover-class="hoverClass" hover-start-time="1500" hover-stay-time="3000">
+        hover-class
+    </view> -->
+    <!-- 
+    .ViewContainer{
+        width: 200rpx;
+        height: 200rpx;
+        background-color: black;
+        color: blanchedalmond;
+    }
+    
+    .hoverClass{
+        background-color: red;
+        color: yellow;
+    } -->
+
+    <!-- scroll-view 滚动容器 -->
+    <!-- 纵向：
+    <scroll-view class="scrollContainer" scroll-y>
+    <view class="item" style="background-color:lightblue;">1</view>
+    <view class="item" style="background-color:lightcoral;">2</view>
+    <view class="item" style="background-color:lightgray;">3</view>
+    <view class="item" style="background-color:lightpink;">4</view>
+    </scroll-view> -->
+
+    <!-- .scrollContainer{
+        border: 1rpx solid #000;
+        height: 300rpx;
+        width: 100%;
+    }
+    .item{
+        width: 100%;
+        height: 300rpx;
+    } -->
+
+    <!-- 横向： 要加上enable-flex 且通过flex属性来设置
+    <scroll-view class="scrollContainer" scroll-x enable-flex>
+    <view class="item" style="background-color:lightblue;">1</view>
+    <view class="item" style="background-color:lightcoral;">2</view>
+    <view class="item" style="background-color:lightgray;">3</view>
+    <view class="item" style="background-color:lightpink;">4</view>
+    </scroll-view>
+    -->
+    <!-- .scrollContainer{
+        border: 1rpx solid #000;
+        height: 300rpx;
+        width: 100%;
+        display: flex;
+        white-space: normal;
+    }
+    .item{
+        width: 100%;
+        flex: 1 0 auto;
+        height: 300rpx;
+    } -->
+
+    <!-- icon  type size color-->
+    <!-- icon的类型，有效值：success, success_no_circle, info, warn, waiting, cancel, download, search, clear -->
+    <!-- <view class="test-contaienr">
+        <icon type="success" size="100rpx" color="red"></icon>
+        <icon type="success_no_circle" size="100rpx" color="green"></icon>
+        <icon type="info" size="100rpx" color="yellow"></icon>
+        <icon type="warn" size="100rpx" color="red"></icon>
+        <icon type="waiting" size="100rpx" color="blue"></icon>
+        <icon type="cancel" size="100rpx" color="blue"></icon>
+        <icon type="clear" size="100rpx" color="blue"></icon>
+        <icon type="download" size="100rpx" color="blue"></icon>
+        <icon type="search" size="100rpx" color="blue"></icon>
+    </view> -->
+
+    <!-- rich-text 富文本 将html代码展示出来 nodes-->
+    <!-- <view class="test-container">
+        <rich-text nodes="{{htmlStr}}" user-select></rich-text>
+    </view> -->
+    <!-- js： htmlStr:`<div class="div_class">
+        <h1>Title</h1>
+        <p class="p">
+        Life is&nbsp;<i>like</i>&nbsp;a box of
+        <b>&nbsp;chocolates</b>.
+        </p>
+    </div>` -->
+
+    <!-- text 类似span 	user-select -->
+    <!-- text 组件内只支持 text 嵌套 -->
+
+    <!-- button size、type、plain、disabled、loading、form-type。。。。 -->
+    <!-- <view class="container">
+        <button size="mini">hello</button>
+        <button size="mini" type="warn">hello</button>
+        <button type="primary">hello</button>
+        <button size="mini" type="primary" plain>hello</button>
+        <button type="primary" disabled>hello</button>
+        <button type="primary" loading>hello</button>
+        <button type="primary" open-type="getPhoneNumber">hello</button>
+    </view> -->
+
+    <!-- navigator 导航跳转  target、url、open-type（打开方式、格外注意）  -->
+    <!-- <navigator url="/pages/login/login" open-type="switchTab">点击跳转</navigator> -->
+    <!-- <navigator url="/pages/hello/hello">点击跳转</navigator> -->
+
+    <!-- image 媒体组件 src、mode -->
+    <!-- <image src="/image/1.png" class="img-container" mode="center"></image> -->
+    <!-- <image src="/image/1.png" class="img-container" mode="center" 	show-menu-by-longpress></image> -->
+    <!-- .img-container{
+        width: 300rpx;	
+        height: 300rpx;
+        border: 1rpx solid;
+    } -->
+
+
+    
+</body>
+
+</html>
