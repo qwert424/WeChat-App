@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 表单组件 -->
+
+    <!-- form -->
+    <!-- <form name="fromTest" bind:submit="handleSubmit">
+        <input type="text" name="test" id="" placeholder="请输入" />
+        <button form-type="submit">提交</button>
+        <button form-type="reset">重置</button>
+    </form> -->
+    <!-- handleSubmit(e){
+        console.log(e)
+    }, -->
+
+    <!-- lable关联 for绑定id -->
+    <!-- <form name="test">
+        <checkbox-group bindchange="">
+            <label for="male">男</label>
+            <checkbox value="male" id="male" />
+        </checkbox-group>
+    </form> -->
+    <!-- <form bindsubmit="" name="test">
+        <checkbox-group bindchange="">
+            <label>
+                <checkbox value="male" id="male" />男
+            </label>
+        </checkbox-group>
+    </form> -->
+
+    <!-- checkbox-group（一组）、checkbox 多选框 lable关联-->
+    <!-- <form bindsubmit="" name="test">
+        <checkbox-group bindchange="handleChange">
+            <label>
+                <checkbox value="banana" checked color='red'/>香蕉
+            </label>
+            <label>
+                <checkbox value="apple" disabled />苹果
+            </label>
+        </checkbox-group>
+    </form> -->
+    <!-- handleChange(e){
+        console.log(e)
+    }, -->
+
+    <!-- radio-group radio 单选框 -->
+    <!-- <form bindsubmit="" name="test">
+        <radio-group bind:change="handleChange">
+            <label>
+                <radio value="male" checked color="red">男</radio>
+            </label>
+            <label>
+                <radio value="female" disabled>女</radio>
+            </label>
+            <label>
+                <radio value="other">其他</radio>
+            </label>
+        </radio-group>
+    </form> -->
+    <!-- handleChange(e){
+        console.log(e)
+      }, -->
+
+    <!-- input 基础决定上限 很重要 -->
+    <!-- 默认没样式 -->
+    <!-- <form bindsubmit="" name="test">
+        <input type="text" name="" id="" value="nihao" style="border: 1rpx solid;" confirm-type="go" confirm-hold />
+        <input type="text" name="" id="" style="border: 1rpx solid;" confirm-type="next" />
+        <input type="text" name="" id="" value="nihao" style="border: 1rpx solid;" confirm-type="done" />
+        <input type="number" name="" id="" password style="border: 1rpx solid;" />
+        <input type="idcard" name="" id="" style="border: 1rpx solid;" focus hold-keyboard />
+        <input type="digit" name="" id="" disabled style="border: 1rpx solid;" />
+        <input type="nickname" name="" id="" style="border: 1rpx solid;" placeholder="请输入昵称"
+            placeholder-class="placeholder" />
+    </form> -->
+    <!-- .placeholder{
+        font-size: 24rpx;
+        color: red;
+    } -->
+
+    <!-- textarea -->
+    <!-- tip: 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。 -->
+    <!-- <form bindsubmit="" name="test">
+        <textarea value="" auto-height class="textarea" />
+    </form> -->
+    <!-- .textarea{
+        width: 400rpx;
+        border: 1rpx solid;
+    } -->
+
+    <!-- switch 切换 -->
+    <!-- 修改样式要通过源码中的 wx-switch-input 和它的伪元素after before -->
+    <!-- <form bindsubmit="" name="test">
+        <label for="switch">切换switch</label>
+        <switch checked bindchange="" id="switch" color="red" class="switch" />
+
+        <label for="switch">切换switch</label>
+        <switch disabled bindchange="" id="switch1" />
+    </form> -->
+    <!-- .switch .wx-switch-input{
+        height: 30rpx;
+        width: 70rpx;
+    }
+    
+    .switch .wx-switch-input::after{
+        height: 40rpx;
+        width: 40rpx;
+        top: -5rpx;
+    }
+    .switch .wx-switch-input::before{
+        height: 30rpx;
+        width: 30rpx;
+    } -->
+
+    <!-- slider 滑块 -->
+    <!-- <form bindsubmit="" name="test">
+        <slider bindchange="handleChange" min="10" max="110" show-value />
+        <slider bindchange="handleChange" min="10" max="110" step="10" block-size="12" show-value />
+    </form> -->
+    <!-- handleChange(e){
+        console.log(e)
+      }, -->
+
+    <!-- keyboard-accessory 键盘上方工具 设置 input / textarea 聚焦时键盘上方 cover-view / cover-image 工具栏视图 -->
+    <!-- <form bindsubmit="" name="test">
+        <input type="text" name="" id="" style="border: 1rpx solid">
+        <keyboard-accessory class="keycontainer" style="height: 50px;">
+            <cover-view class="item" style=" background: green;">1</cover-view>
+            <cover-view class="item" style=" background: red;">2</cover-view>
+        </keyboard-accessory>
+        </input>
+    </form> -->
+
+    <!-- .keycontainer{
+    display: flex;
+    width: 100%;
+    }
+
+    .item{
+    width: 50%;
+    flex: 1;
+    } -->
+
+    <!-- picker从底部弹起的滚动选择器 picker-view嵌入页面的滚动选择器。 picker-view-column滚动选择器子项 -->
+    <!-- <picker mode="selector" header-text="hello" range="{{test}}">
+        点击
+    </picker>
+    <picker mode="multiSelector" header-text="hello" range="{{test1}}">
+        点击
+    </picker>
+    <picker mode="time" header-text="hello" value="12:22" start="00:00" end="23:59">
+        点击
+    </picker>
+    <picker mode="date" header-text="hello" value="2023:10:07" start="2000:01:01" end="2024:11:22" fields='year'>
+        点击
+    </picker>
+    <picker mode="date" header-text="hello" value="2023:10:07" start="2000:01:01" end="2024:11:22">
+        点击
+    </picker>
+    <picker mode="region" header-text="hello" custom-item="{{test2}}">
+        点击
+    </picker> -->
+    <!-- test:[1,2,3],
+    test1:[[1,2],[1,2,3],[1,2,3]],
+    test2:"请选择" -->
+
+    <!-- <picker-view value="{{test3}}" style="width: 100%; height: 300px;border: 1rpx solid;">
+        <picker-view-column>
+            <view wx:for="{{year}}" wx:key="this">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{month}}" wx:key="this">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{day}}" wx:key="this">{{item}}</view>
+        </picker-view-column>
+    </picker-view> -->
+    <!-- test3:[2023, 1, 1],
+    year:[2021,2022,2023],
+    month:[1,2,3,4,5,6],
+    day:[1,2,3] -->
+
+</body>
+
+</html>
