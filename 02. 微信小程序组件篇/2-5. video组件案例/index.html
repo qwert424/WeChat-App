@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- vedio -->
+
+    <!-- 创建 video 上下文 VideoContext 对象。建议使用 wx.createSelectorQuery 获取 context 对象。 -->
+    <!--VideoContext： https://developers.weixin.qq.com/miniprogram/dev/api/media/video/VideoContext.html -->
+
+    <!-- <video
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        class="video-container" danmu-list="{{list}}" danmu-btn enable-danmu autoplay loop muted direction="-90"
+        poster="{{imgUrl}}" title="hello" object-fit="contain" show-center-play-btn="{{false}}"
+        show-play-btn="{{false}}" show-mute-btn enable-play-gesture vslide-gesture show-screen-lock-button
+        show-snapshot-button /> -->
+
+    <!-- 案例 -->
+    <!-- <video id="myVideo"
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        class="video-container" danmu-list="{{list}}" danmu-btn enable-danmu loop direction="-90" object-fit="contain"
+        poster="{{imgUrl}}" show-mute-btn title="hello" enable-play-gesture vslide-gesture show-screen-lock-button
+        show-snapshot-button />
+
+    <view class="danmu-container">
+        <input type="text" class="input" placeholder="快来发送你的弹幕吧！" model:value="{{value}}" bind:input="handleInput" />
+        <button type="primary" bind:tap="handleSendDanmu">发送弹幕</button>
+    </view> -->
+    <!-- 
+    imgUrl: "https://img0.baidu.com/it/u=856287882,654438212&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+    list: [{
+      text: "hahah",
+      color: "red",
+      time: 3
+    }, {
+      text: "hahah",
+      color: "red",
+      time: 1
+    }, {
+      text: "hahah",
+      color: "red",
+      time: 5
+    }],
+    value: "",
+    videoContext: "",//视频上下文 -->
+    <!-- handleInput() { },
+    handleSendDanmu() {
+        if (this.data.value) {
+        this.data.videoContext.sendDanmu({ text: this.data.value, color: getRandomColor() })
+        } else {
+        wx.showToast({
+            title: '不能为空',
+            icon: "error"
+        })
+        }
+    }, -->
+    <!-- onReady() {
+        const videoContext = wx.createVideoContext("myVideo")
+        this.setData({
+          videoContext
+        })
+      }, -->
+
+
+</body>
+
+</html>
