@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- movable组件 -->
+    <!-- movable-area 移动区域 movable-view移动对象-->
+    <!-- <movable-area class="moveArea" scale-area>
+        <movable-view direction="all" class="moveItem" inertia out-of-bounds scale></movable-view>
+    </movable-area> -->
+    <!--     
+    .moveArea{
+        width: 100%;
+        height: 300rpx;
+        background-color: red;
+    }
+
+    .moveItem{
+        width: 50rpx;
+        height: 50rpx;
+        background-color: blue;
+    } -->
+
+    <!-- 案例实现微信聊天框小卡片的效果 -->
+
+    <!-- <view class="move-container">
+        <block wx:for="{{list}}" wx:key="this">
+            <movable-area class="moveArea">
+                <movable-view class="moveItem" direction="horizontal" x="{{item.x}}" bind:touchstart="handleTouchStart"
+                    bind:touchend="handleTouchEnd" data-index="{{index}}" out-of-bounds damping="30">
+                    <view class="msgItem">
+                        <image src="{{item.avatar}}" class="img"></image>
+                        <view class=""></view>
+                        <view class="msg msg-container">
+                            <text class="name">{{item.nickName}}</text>
+                            <text class="talk">{{item.talk}}</text>
+                        </view>
+                        <view class="time msg-container">
+                            <text class="now">{{item.time}}</text>
+                            <text class="more">...</text>
+                        </view>
+                    </view>
+                </movable-view>
+                <view class="deleteItem">删除</view>
+            </movable-area>
+        </block>
+    </view> -->
+    <!-- list: [{
+        avatar: "https://img0.baidu.com/it/u=856287882,654438212&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+        nickName: "小龙",
+        talk: "今天天气不错",
+        x: "120rpx",
+        time: "2022-11-20"
+      }, {
+        avatar: "https://img0.baidu.com/it/u=856287882,654438212&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+        nickName: "小龙",
+        talk: "今天天气不错",
+        x: "120rpx",
+        time: "2022-11-20"
+      }, {
+        avatar: "https://img0.baidu.com/it/u=856287882,654438212&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+        nickName: "小龙",
+        talk: "今天天气不错",
+        x: "120rpx",
+        time: "2022-11-20"
+      }],
+      startXDis: 0
+    // handleChange(e) {
+        //   const xDis=e.detail.x
+        //   const currentIndex=e.target.dataset.index;
+        //   const x=`list[${currentIndex}].x`
+        //   if(xDis<30){
+        //     this.setData({
+        //       [x]:"0rpx"
+        //     })
+        //   }else{
+        //     this.setData({
+        //       [x]:"120rpx"
+        //     })
+        //   }
+        // },
+        handleTouchStart(e) {
+          this.setData({
+            "startXDis": e.changedTouches[0].clientX
+          })
+        },
+        handleTouchEnd(e) {
+          const XDis = e.changedTouches[0].clientX;
+          const Dis = XDis - this.data.startXDis;
+          const currentIndex = e.currentTarget.dataset.index;
+          const x = `list[${currentIndex}].x`;
+          if (Dis < -25) {
+            this.setData({
+              [x]: "0rpx"
+            })
+          }else{
+            this.setData({
+              [x]: "120rpx"
+            })
+          }
+        }, -->
+
+    <!-- .move-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100rpx;
+        }
+
+
+        .moveArea {
+            width: calc(100% + 120rpx);
+            position: relative;
+            left: -120rpx;
+            height: 120rpx;
+            margin: 20rpx 0;
+            border: 1rpx solid;
+        }
+
+        .moveItem {
+            height: 120rpx;
+            width: calc(100% - 120rpx);
+            background-color: #fff;
+        }
+
+        .deleteItem {
+            width: 120rpx;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            line-height: 120rpx;
+            color: #fff;
+            background-color: brown;
+            letter-spacing: 4rpx;
+            z-index: -1;
+        }
+
+        .msgItem {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10rpx 40rpx;
+            box-sizing: border-box;
+            gap: 20rpx;
+        }
+
+        .msgItem .img {
+            width: 100rpx;
+            height: 100%;
+        }
+
+        .msg-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        .msg{
+            flex:1 1 auto;
+        }
+        .msg .name{
+            font-size: 30rpx;
+            font-weight: bold;
+        }
+        .msg .talk{
+            font-size: 24rpx;
+            color: #666;
+        }
+        .time {
+            align-items:flex-end ;
+        }
+        .time .now{
+            font-size: 20rpx;
+        }
+        .time .more{
+            letter-spacing: 5rpx;
+            font-size: 18rpx;
+        } -->
+
+
+</body>
+
+</html>
