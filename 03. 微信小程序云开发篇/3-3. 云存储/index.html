@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 云存储 具体参考：https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/storage.html#%E5%AD%98%E5%82%A8-->
+    <!-- uploadFile
+    downloadFile
+    deleteFile
+    getTempFileURL -->
+    <!-- 具体操作： -->
+    <!-- 组件和上传操作：
+    index.wxml-->
+    <!-- <van-uploader file-list="{{ fileList }}" max-count="2" bind:after-read="afterRead" use-before-read
+        bind:before-read="beforeRead" upload-text="图片" accept="image" />
+    <button bind:tap="handleTap">上传</button>
+    <button bind:tap="handlechange">其他操作 删除、下载、临时链接</button>
+    <van-notify id="van-notify" /> -->
+
+    <!-- js：
+    import Notify from '@vant/weapp/notify/notify';
+    data: {
+        fileList: [
+          // {
+          //   url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+          //   status: 'uploading',
+          //   message: '上传中',
+          // },
+          // {
+          //   url: 'https://img.yzcdn.cn/vant/tree.jpg',
+          //   status: 'failed',
+          //   message: '上传失败',
+          // },
+        ],
+    } -->
+    <!-- // 云存储学习
+    handleTap() {
+      this.data.fileList.forEach((item, index) => {
+        this.setData({
+          [`fileList[${index}]`]: {
+            ...item,
+            status: 'uploading',
+            message: '上传中',
+          }
+        })
+      });
+      this.data.fileList.forEach((item, index) => {
+        const random = Math.random() * 10000
+        const { url } = item;
+        const name = url.match(/\.[^.]+?$/)[0]
+        wx.cloud.uploadFile({
+          cloudPath: random + name, // 上传至云端的路径
+          filePath: url, // 小程序临时文件路径
+          success: res => {
+            // 返回文件 ID
+            console.log(res.fileID);
+            Notify({ type: 'success', message: '上传成功' });
+          },
+          fail: console.error,
+          complete: (resp) => {
+            if (resp.fileID) {
+              this.setData({
+                [`fileList[${index}]`]: {
+                  ...item,
+                  status: 'success',
+                  message: '上传成功',
+                }
+              })
+            } else {
+              this.setData({
+                [`fileList[${index}]`]: {
+                  ...item,
+                  status: 'failed',
+                  message: '上传失败',
+                }
+              })
+              Notify({ type: 'warning', message: '上传失败' });
+            }
+  
+          }
+        })
+      });
+  
+      // wx.cloud.uploadFile({
+      //   cloudPath: 'example.png', // 上传至云端的路径
+      //   filePath: file.url, // 小程序临时文件路径
+      //   success: res => {
+      //     // 返回文件 ID
+      //     console.log(res.fileID)
+      //   },
+      //   fail: console.error
+      // })
+    },
+    afterRead(event) {
+      const { file } = event.detail;
+      this.setData({
+        fileList: this.data.fileList.concat({
+          url: file.url
+        })
+      })
+    },
+    beforeRead(event) {
+      const { file, callback } = event.detail;
+      callback(file.type === 'image');
+    }, -->
+
+    <!-- 其他操作：
+    handlechange() {
+        // 下载操作
+        // wx.cloud.downloadFile({
+        //   fileID: 'cloud://mycloudbase-mini-7frr1ra857b1867.6d79-mycloudbase-mini-7frr1ra857b1867-1306424498/5692.801125121636.png', // 文件 ID
+        //   success: res => {
+        //     // 返回临时文件路径
+        //     console.log(res.tempFilePath,res)
+        //     this.setData({
+        //       fileList: this.data.fileList.concat({
+        //         url: res.tempFilePath
+        //       })
+        //     })
+        //   },
+        //   fail: console.error
+        // })
+    
+        // 删除操作  fileList: ['fildID'],
+        // wx.cloud.deleteFile({
+        //   fileList: ['cloud://mycloudbase-mini-7frr1ra857b1867.6d79-mycloudbase-mini-7frr1ra857b1867-1306424498/5692.801125121636.png'],
+        //   success: res => {
+        //     // handle success
+        //     console.log(res.fileList)
+        //   },
+        //   fail: console.error
+        // })
+        // 换取临时链接
+        // wx.cloud.getTempFileURL({
+        //   fileList: ['cloud://mycloudbase-mini-7frr1ra857b1867.6d79-mycloudbase-mini-7frr1ra857b1867-1306424498/614.703279773603.png'],
+        //   success: res => {
+        //     // fileList 是一个有如下结构的对象数组
+        //     // [{
+        //     //    fileID: 'cloud://xxx.png', // 文件 ID
+        //     //    tempFileURL: '', // 临时文件网络链接
+        //     //    maxAge: 120 * 60 * 1000, // 有效期
+        //     // }]
+        //     console.log(res.fileList)
+        //   },
+        //   fail: console.error
+        // })
+      } -->
+
+
+</body>
+
+</html>
