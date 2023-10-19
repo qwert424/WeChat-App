@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <view class="copass-container">
+        <view class="text">
+            <text>{{direction}}</text>
+            <text>{{angle}}°</text>
+        </view>
+        <image src="/assets/compass.png" class="img" style="transform:rotate({{rotate}}deg);" />
+    </view> -->
+    <!-- jump(){
+        wx.navigateTo({
+          url: '/pages/compass/compass',
+        })
+    }, -->
+
+    <!-- <view class="copass-container">
+        <view class="text">
+            <text>{{direction}}</text>
+            <text>{{angle}}°</text>
+        </view>
+        <image src="/assets/compass.png" class="img" style="transform:rotate({{rotate}}deg);" />
+    </view> -->
+    <!-- data: {
+        direction: "--",
+        angle: "--",
+        rotate: 0
+    },
+    check(i) {
+        if (15 <= i && i <= 75) {
+            return '东北'
+        } else if (75 < i && i < 105) {
+            return '正东'
+        } else if (105 <= i && i <= 165) {
+            return '东南'
+        } else if (165 < i && i < 195) {
+            return '正南'
+        } else if (195 <= i && i <= 255) {
+            return '西南'
+        } else if (255 < i && i < 285) {
+            return '正西'
+        } else if (285 <= i && i <= 345) {
+            return '西北'
+        } else {
+            return '正北'
+        }
+    },
+    onLoad(options) {
+        wx.onCompassChange(({ direction }) => {
+            this.setData({
+                angle: direction.toFixed(2),
+                rotate: -direction.toFixed(0),
+                direction: this.check(direction.toFixed(0))
+            })
+        })
+        // 判断是否有罗盘
+        setTimeout(() => {
+            if (this.data.direction === "--" && this.data.angle === "--") {
+                wx.stopCompass()
+                wx.showToast({
+                    title: '没有电子罗盘',
+                    icon: 'error',
+                    duration: 3000,
+                    mask: true
+                })
+            }
+        }, 3000);
+    }, -->
+</body>
+
+</html>

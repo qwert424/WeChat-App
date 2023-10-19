@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 分包 subpackages
+    独立分包 independent
+    预下载 preloadRule
+    异步化 componentPlaceholder占位
+    具体看：https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html -->
+
+    <!-- "pages": [
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "subpackages": [
+        {
+          "root": "packageB",
+          "pages": [
+            "pages/cat",
+            "pages/dog"
+          ]
+        }, {
+          "root": "packageA",
+          "name": "pack1",
+          "pages": [
+            "pages/apple",
+            "pages/banana"
+          ],
+          "independent":true
+        }
+      ],
+      "tabBar": {
+          "list":[{
+              "pagePath":"pages/index/index",
+              "text":"index"
+          },{
+            "pagePath":"pages/logs/logs",
+            "text":"log"
+        }],
+        "position": "top"
+      },
+      "preloadRule": {
+        "pages/index/index": {
+          "network": "all",
+          "packages": ["packageB"]
+        },
+        "pages/logs/logs": {
+          "packages": ["pack1"]
+        }
+      }, -->
+</body>
+
+</html>

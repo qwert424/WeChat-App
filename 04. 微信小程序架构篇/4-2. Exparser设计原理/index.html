@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- webComponents组件的 练习 -->
+    <!-- 我们抽离组件为了提高复用率，提升开发效率。但是脱离了像Vue、React这样的框架后，你会发现，原生JS难道就不能开发自定义组件吗？WebComponent就是为了解决这个问题。 -->
+
+    <!-- 通过模板来创建自定义标签：
+    class MyComponent extends HTMLElement {
+        constructor() {
+            super();
+            ...
+           this.appendChild(...)
+        }
+    }
+    customElements.define('my-component', MyComponent); -->
+
+
+    <my-component></my-component>
+    <my-component text="haha"></my-component>
+    <my-component>
+        <p slot="my-text">这是插入的内容！</p>
+    </my-component>
+    <p class="custom-style">这是一个测试</p>
+    <video src="http://maoyan.meituan.net/movie/videos/854x4804c109134879943f4b24387adc040504b.mp4" controls
+        width="500"></video>
+
+    <template id="constomCompinentTemplate">
+        <style>
+            .custom-style {
+                display: inline-block;
+                padding: 15px;
+                border: 1px solid red;
+                border-radius: 4px;
+                color: red;
+            }
+        </style>
+        <div class="custom-style">
+            <p>'hello world'</p>
+            <slot name="my-text"></slot>
+        </div>
+    </template>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                // // 创建一个 shadowRoot 节点
+                const shadowRoot = this.attachShadow({ mode: 'closed' });
+
+                const template = document.getElementById('constomCompinentTemplate')
+                const content = template.content.cloneNode(true);
+
+                // 获取自定义组件的属性
+                const text = this.getAttribute('text');
+                if (text) {
+                    content.querySelector('p').innerHTML = text;
+                }
+
+                shadowRoot.appendChild(content);
+
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+
+
+</body>
+
+</html>

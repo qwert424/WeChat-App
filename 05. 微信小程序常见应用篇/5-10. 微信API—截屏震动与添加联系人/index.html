@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 用户截屏提示、震动效果 -->
+    <!-- <view>
+        <text>用户是否截图：{{isCaptureScreen}}</text>
+        <button type="primary" bind:tap="handleVibrateShort">震动</button>
+        <button type="primary" bind:tap="handleScreenLight">保持屏幕常亮</button>
+    </view> -->
+
+    <!-- isCaptureScreen: false//是否截图 -->
+
+    <!-- handleVibrateShort(){
+        // 震动
+        wx.vibrateShort({
+          type:"light",
+        })
+      },
+      handleScreenLight(){
+        // 屏幕常亮
+        wx.setKeepScreenOn({
+          keepScreenOn: true,
+          success(resp){
+            console.log(resp)
+          }
+        })
+      }, -->
+
+    <!-- onShow() {
+        // 监听截图
+        wx.onUserCaptureScreen((res) => {
+          // wx.vibrateLong()
+          wx.vibrateShort({
+            type: "heavy"
+          })
+          this.setData({
+            isCaptureScreen: true
+          })
+        })
+      }, -->
+
+    <!-- 添加联系人 -->
+    <!-- <button type="primary" bind:tap="handleAddPerson">添加联系人</button> -->
+    <!-- handleAddPerson(){
+        // 添加联系人
+        wx.addPhoneContact({
+          firstName: '张三',//联系人姓名
+          // mobilePhoneNumber: '18800000000', //联系人手机号
+          success(resp){
+            console.log(resp)
+          },
+          fail(e){
+            console.log(e)
+          }
+        })
+      }, -->
+</body>
+
+</html>

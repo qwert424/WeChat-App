@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 动画效果 -->
+    <!-- <view class="block-container">
+        <view class="block" animation="{{animationData}}"></view>
+        <button type="primary" bind:tap="handleAnimation" style="margin-top: 120rpx;">点击开始动画</button>
+    </view>
+    <view class="changeItem">
+        <text animation="{{animationChangeOne}}">{{startDIs}}</text>
+        <text bind:tap="handleChange">↔</text>
+        <text animation="{{animationChangeTwo}}">{{endDIs}}</text>
+    </view> -->
+
+    <!-- animationData: "",//动画实例
+    startDIs:"北京",//起始地
+    endDIs:"上海",//结束地
+    animationChangeOne:"",//动画实例
+    animationChangeTwo:""//动画实例 -->
+
+    <!-- handleAnimation() {
+        // 点击开始动画
+        // 1、创建动画实例 最后通过export导出
+        const animation = wx.createAnimation({
+          duration: 4000,
+          timingFunction:"ease"
+        })
+        // animation.translateX(100).scaleX(2).opacity(.1).step()
+        animation.translateX(100).step().scaleX(2).opacity(.1).step()
+        this.setData({
+          animationData:animation.export()
+        })
+      },
+      handleChange(){
+        // 交换
+        const obj={
+          duration:100
+        }
+        const animation1=wx.createAnimation(obj)
+        const animation2=wx.createAnimation(obj)
+        animation1.translateX(100).opacity(0.1).step()
+        animation2.translateX(-100).opacity(0.1).step()
+        this.setData({
+          animationChangeOne:animation1.export(),
+          animationChangeTwo:animation2.export()
+        })
+        setTimeout(()=>{
+          animation1.translateX(0).opacity(1).step()
+          animation2.translateX(0).opacity(1).step()
+          const temp=this.data.startDIs
+          const temp1=this.data.endDIs
+          this.setData({
+            animationChangeOne:animation1.export(),
+            animationChangeTwo:animation2.export(),
+            startDIs:temp1,
+            endDIs:temp
+          })
+        },100)
+      }, -->
+</body>
+
+</html>
